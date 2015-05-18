@@ -1,23 +1,45 @@
-## Laravel PHP Framework
+# Catch Software
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+## After you clone the repo
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+### Install all the packages
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+    composer install
+    
+### Create environment files
 
-## Official Documentation
+    cp .env.example .env
+    
+Specify the correct connection details in the new files.
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+### Create database tables
 
-## Contributing
+    artisan migrate
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+Testing database will be populated before running tests and wiped out after.
+    
+## Running tests
 
-### License
+Setup Codeception.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+    cp example.codeception.yml codeception.yml
+    mkdir tests/_output
+
+Run the tests.
+
+    vendor/bin/codecept run [unit, functional, acceptance]
+    
+Or, if you have codeception installed globally, you can run
+
+    codecept run [unit, functional, acceptance]
+    
+If you don't specify the test suite (unit, functional or acceptance), all of them will be executed.
+
+Optionally, you can add the following line to your .bashrc file:
+
+    alias t='vendor/bin/codecept run'
+    
+That way you can run you tests by running the following command from the root of the project:
+
+    t [unit, functional, acceptance]
+    
