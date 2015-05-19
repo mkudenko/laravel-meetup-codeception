@@ -10,7 +10,7 @@
 
     cp .env.example .env
     
-Specify the correct connection details in the new files.
+Specify the correct connection details in the new file.
 
 ### Create database tables
 
