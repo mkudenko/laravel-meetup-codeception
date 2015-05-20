@@ -11,7 +11,8 @@
         "laravel/framework": "5.0.*"
     },
     "require-dev": {
-        "codeception/codeception": "2.0.13"
+        "codeception/codeception": "2.0.13",
+        "electrolinux/phpquery": "0.9.6"
     },
     "autoload": {
         "classmap": [
@@ -19,7 +20,9 @@
         ],
         "psr-4": {
             "App\\": "app/",
-            "UnitTests\\": "tests/unit"
+            "UnitTests\\": "tests/unit",
+            "FunctionalTests\\": "tests/functional",
+            "AcceptanceTests\\": "tests/acceptance"
         }
     },
     "autoload-dev": {
