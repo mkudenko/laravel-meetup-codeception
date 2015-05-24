@@ -9,3 +9,13 @@ settings:
     colors: true
     fail-fast: true
     memory_limit: 1024M
+modules:
+    config:
+        WebDriver:
+            url: 'http://YOUR-DOMAIN.LOCAL/'
+            browser: phantomjs
+            window_size: 1366x768
+            capabilities:
+                unexpectedAlertBehaviour: ‘accept’
+                javascriptEnabled: true
+                resourceTimeout: 5000

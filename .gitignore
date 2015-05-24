@@ -47,4 +47,6 @@ nbproject
 # Codeception #
 ###############
 codeception.yml
+# We need to ignore all the files in _output folder, but the folder needs stay in the repo.
 tests/_output/*
+!tests/_output/.gitkeep
