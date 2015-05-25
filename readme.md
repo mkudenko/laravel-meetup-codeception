@@ -24,6 +24,7 @@ _**Note:** Unit tests use SQLite database which runs in memory. It's already ins
 Setup Codeception.
 
     cp example.codeception.yml codeception.yml
+    codecept build
 
 Run the tests.
 
