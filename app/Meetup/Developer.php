@@ -14,7 +14,7 @@ class Developer
 
     public function isHappy()
     {
-
+        return ($this->actualRate >= $this->desiredRate);
     }
 
 }
