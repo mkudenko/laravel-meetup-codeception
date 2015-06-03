@@ -22,4 +22,9 @@ class Developer
         return ($this->isHappy()) ? 1 : 5;
     }
 
+    public function deservesHoliday()
+    {
+        return false;
+    }
+
 }
