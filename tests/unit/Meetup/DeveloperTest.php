@@ -1,5 +1,6 @@
 <?php namespace UnitTests\Meetup;
 
+use App\Meetup\Developer;
 use UnitTests\TestCase;
 
 class DeveloperTest extends TestCase
