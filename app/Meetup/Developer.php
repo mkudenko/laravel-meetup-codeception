@@ -17,4 +17,9 @@ class Developer
         return ($this->actualRate >= $this->desiredRate);
     }
 
+    public function fuckupsPerWeek()
+    {
+
+    }
+
 }
