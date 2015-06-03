@@ -19,7 +19,7 @@ class Developer
 
     public function fuckupsPerWeek()
     {
-        return 1;
+        return ($this->isHappy()) ? 1 : 5;
     }
 
 }

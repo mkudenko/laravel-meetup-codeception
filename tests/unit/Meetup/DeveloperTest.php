@@ -28,12 +28,22 @@ class DeveloperTest extends TestCase
 
     public function testFuckupsPerWeekWhenHappy()
     {
+        $actualRate = 100;
+        $desiredRate = 80;
+
+        $developer = new Developer($actualRate, $desiredRate);
+
+        $this->assertEquals(1, $developer->fuckupsPerWeek());
+    }
+
+    public function testFuckupsPerWeekWhenUnhappy()
+    {
         $actualRate = 80;
         $desiredRate = 100;
 
         $developer = new Developer($actualRate, $desiredRate);
 
-        $this->assertEquals(1, $developer->fuckupsPerWeek());
+        $this->assertEquals(5, $developer->fuckupsPerWeek());
     }
 
 }
